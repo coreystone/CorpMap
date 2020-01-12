@@ -10,6 +10,9 @@ date/time, weather, compliance and contact informaiton corresponding the branch.
 
 This project was a great introduction to HTML and organizing and manipulating information using Python at a larger scale.
 
+## Demo
+![alt text](https://github.com/coreystone/CorpMap/blob/master/demo.gif "")
+
 ## Walkthrough
 ![alt text](https://github.com/coreystone/CorpMap/blob/master/map.png "")
 
