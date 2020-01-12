@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4eacf0fa0ed24317854fee69a0d5733a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.js"></script>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_4eacf0fa0ed24317854fee69a0d5733a" ></div>
+        
+</body>
+<script>    
+    
+            var map_4eacf0fa0ed24317854fee69a0d5733a = L.map(
+                "map_4eacf0fa0ed24317854fee69a0d5733a",
+                {
+                    center: [45.372, -121.6972],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[-190, -50], [190, 75]],
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8591563c6f3f467fb3b6ae0b917728f9 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 2, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4eacf0fa0ed24317854fee69a0d5733a);
+        
+    
+            var mouse_position_275eed7c08574fd0a6723a7b1bfa2380 = new L.Control.MousePosition(
+                {"emptyString": "", "lngFirst": true, "numDigits": 20, "position": "topright", "prefix": "Coordinates:", "separator": " | "}
+            );
+            mouse_position_275eed7c08574fd0a6723a7b1bfa2380.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' º ';};;
+            mouse_position_275eed7c08574fd0a6723a7b1bfa2380.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' º ';};;
+            map_4eacf0fa0ed24317854fee69a0d5733a.addControl(mouse_position_275eed7c08574fd0a6723a7b1bfa2380);
+        
+    
+            var feature_group_c21c538638f740a79db43b9a4154c167 = L.featureGroup(
+                {}
+            ).addTo(map_4eacf0fa0ed24317854fee69a0d5733a);
+        
+    
+            var marker_18421905c70b43ed9dfce50c732bf5fe = L.marker(
+                [29.72844, -95.5554],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_570b8953a1f04b3bbea6b3759ee5caa5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_18421905c70b43ed9dfce50c732bf5fe.setIcon(icon_570b8953a1f04b3bbea6b3759ee5caa5);
+        
+    
+        var popup_4e1e731233864691b36ff8c8f1cda2b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_872ab1456d7a45f19e6a226298a1768b = $(`<div id="html_872ab1456d7a45f19e6a226298a1768b" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Houston, USA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;10:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;6.12°C   |   43.02°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_4e1e731233864691b36ff8c8f1cda2b3.setContent(html_872ab1456d7a45f19e6a226298a1768b);
+        
+
+        marker_18421905c70b43ed9dfce50c732bf5fe.bindPopup(popup_4e1e731233864691b36ff8c8f1cda2b3)
+        ;
+
+        
+    
+    
+            marker_18421905c70b43ed9dfce50c732bf5fe.bindTooltip(
+                `<div>
+                     Houston
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b149cf646d554eb093312cad88431591 = L.marker(
+                [51.04869, -114.0732],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_9273164b1a3b42caaed4efadf5d0c56e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b149cf646d554eb093312cad88431591.setIcon(icon_9273164b1a3b42caaed4efadf5d0c56e);
+        
+    
+        var popup_f5b485a9b61b4e3a9da3def8202b50a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_075a8de830b247a695c910aa8c850193 = $(`<div id="html_075a8de830b247a695c910aa8c850193" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_calgary.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Calgary, CANADA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;09:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;-23.09°C   |   -9.56°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_f5b485a9b61b4e3a9da3def8202b50a6.setContent(html_075a8de830b247a695c910aa8c850193);
+        
+
+        marker_b149cf646d554eb093312cad88431591.bindPopup(popup_f5b485a9b61b4e3a9da3def8202b50a6)
+        ;
+
+        
+    
+    
+            marker_b149cf646d554eb093312cad88431591.bindTooltip(
+                `<div>
+                     Calgary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_10322ff87376473d807fcfc2ab7520ac = L.marker(
+                [33.674141, -117.670097],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_d436b725d7944cc1aa4fa2f1d372a5e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_10322ff87376473d807fcfc2ab7520ac.setIcon(icon_d436b725d7944cc1aa4fa2f1d372a5e8);
+        
+    
+        var popup_a199f5828618413d8d8cf784f2d1fe44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c2ab7e54a1b4e03adf38325f92d5b28 = $(`<div id="html_2c2ab7e54a1b4e03adf38325f92d5b28" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://california.wonderware.com/media/WWNC/images/2018_LakeForest_Event/Wonderware_HQ.png width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Lake Forest, USA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;08:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;6.93°C   |   44.47°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_a199f5828618413d8d8cf784f2d1fe44.setContent(html_2c2ab7e54a1b4e03adf38325f92d5b28);
+        
+
+        marker_10322ff87376473d807fcfc2ab7520ac.bindPopup(popup_a199f5828618413d8d8cf784f2d1fe44)
+        ;
+
+        
+    
+    
+            marker_10322ff87376473d807fcfc2ab7520ac.bindTooltip(
+                `<div>
+                     Lake Forest
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4481f88228d24ab1a8a88e3d9009b3b9 = L.marker(
+                [39.86622, -75.27474],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_5c321a007c774a8a9f14b926649a4fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4481f88228d24ab1a8a88e3d9009b3b9.setIcon(icon_5c321a007c774a8a9f14b926649a4fa4);
+        
+    
+        var popup_c2d0e90e6bcd4cb6962f2d59e6f4f217 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef26185d8df14106b2be016ee07938c6 = $(`<div id="html_ef26185d8df14106b2be016ee07938c6" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Philadelphia, USA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;11:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17.53°C   |   63.55°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_c2d0e90e6bcd4cb6962f2d59e6f4f217.setContent(html_ef26185d8df14106b2be016ee07938c6);
+        
+
+        marker_4481f88228d24ab1a8a88e3d9009b3b9.bindPopup(popup_c2d0e90e6bcd4cb6962f2d59e6f4f217)
+        ;
+
+        
+    
+    
+            marker_4481f88228d24ab1a8a88e3d9009b3b9.bindTooltip(
+                `<div>
+                     Philadelphia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e2fdefe6417f44799a458d28560da62a = L.marker(
+                [19.432608, -99.133209],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_9c3b4f36a01d4828b1329d07dceec81e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e2fdefe6417f44799a458d28560da62a.setIcon(icon_9c3b4f36a01d4828b1329d07dceec81e);
+        
+    
+        var popup_f008785e21b9459881a36bc515064cb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21e982f7e5ed46de9e597a189c0058f9 = $(`<div id="html_21e982f7e5ed46de9e597a189c0058f9" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Mexico City, MEXICO</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;10:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;13.18°C   |   55.72°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_f008785e21b9459881a36bc515064cb6.setContent(html_21e982f7e5ed46de9e597a189c0058f9);
+        
+
+        marker_e2fdefe6417f44799a458d28560da62a.bindPopup(popup_f008785e21b9459881a36bc515064cb6)
+        ;
+
+        
+    
+    
+            marker_e2fdefe6417f44799a458d28560da62a.bindTooltip(
+                `<div>
+                     Mexico City
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bf7e33631807496c9d496b21d23ce252 = L.marker(
+                [-22.906847, -43.172897],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_21d12796b48c444b9e371d4e3f8857e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bf7e33631807496c9d496b21d23ce252.setIcon(icon_21d12796b48c444b9e371d4e3f8857e2);
+        
+    
+        var popup_a5743dd2bf9a4806aef0863a5f255110 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_553951da53374e0485339dace111b4d4 = $(`<div id="html_553951da53374e0485339dace111b4d4" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_rio.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Rio, BRASIL</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;13:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;8.25°C   |   46.85°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_a5743dd2bf9a4806aef0863a5f255110.setContent(html_553951da53374e0485339dace111b4d4);
+        
+
+        marker_bf7e33631807496c9d496b21d23ce252.bindPopup(popup_a5743dd2bf9a4806aef0863a5f255110)
+        ;
+
+        
+    
+    
+            marker_bf7e33631807496c9d496b21d23ce252.bindTooltip(
+                `<div>
+                     Rio
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68229aa4ec6d4673aeb1c4530bdf68e2 = L.marker(
+                [-33.448891, -70.669266],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_0b8b1e651c5e4917aebccb42df694a6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_68229aa4ec6d4673aeb1c4530bdf68e2.setIcon(icon_0b8b1e651c5e4917aebccb42df694a6b);
+        
+    
+        var popup_3dcfa7c5f3eb4e4f93664108f98379d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a71cf2ef2ca4c1c9c2f16922111e9a6 = $(`<div id="html_0a71cf2ef2ca4c1c9c2f16922111e9a6" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_santiago.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Santiago, CHILE</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;13:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;28.83°C   |   83.89°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_3dcfa7c5f3eb4e4f93664108f98379d2.setContent(html_0a71cf2ef2ca4c1c9c2f16922111e9a6);
+        
+
+        marker_68229aa4ec6d4673aeb1c4530bdf68e2.bindPopup(popup_3dcfa7c5f3eb4e4f93664108f98379d2)
+        ;
+
+        
+    
+    
+            marker_68229aa4ec6d4673aeb1c4530bdf68e2.bindTooltip(
+                `<div>
+                     Santiago
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0b5d153a66f4affbb02c1ebe5f642a5 = L.marker(
+                [4.710989, -74.07209],
+                {}
+            ).addTo(feature_group_c21c538638f740a79db43b9a4154c167);
+        
+    
+            var icon_93e1dd2ebe2f48d2a7a44a41fdbca94d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b0b5d153a66f4affbb02c1ebe5f642a5.setIcon(icon_93e1dd2ebe2f48d2a7a44a41fdbca94d);
+        
+    
+        var popup_88eb38ddc6c54e65a8e39b0e1da8cd07 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03b39591d66649c2a36aafc733515ff7 = $(`<div id="html_03b39591d66649c2a36aafc733515ff7" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_bogota.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Bogota, COLOMBIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;11:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17.0°C   |   62.6°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_88eb38ddc6c54e65a8e39b0e1da8cd07.setContent(html_03b39591d66649c2a36aafc733515ff7);
+        
+
+        marker_b0b5d153a66f4affbb02c1ebe5f642a5.bindPopup(popup_88eb38ddc6c54e65a8e39b0e1da8cd07)
+        ;
+
+        
+    
+    
+            marker_b0b5d153a66f4affbb02c1ebe5f642a5.bindTooltip(
+                `<div>
+                     Bogota
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_4d66686c158b4edb90b11d4d15a26a76 = L.featureGroup(
+                {}
+            ).addTo(map_4eacf0fa0ed24317854fee69a0d5733a);
+        
+    
+            var marker_4ec245ba5dae4d67963104cdc1a9b389 = L.marker(
+                [55.60355, 13.0109],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_17f28d2342324e35a52c0ee01719986b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_4ec245ba5dae4d67963104cdc1a9b389.setIcon(icon_17f28d2342324e35a52c0ee01719986b);
+        
+    
+        var popup_535d6d28cc7547ff9f188e553d5ffc52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3dd6e5bbf625480f9c4f47e74792c879 = $(`<div id="html_3dd6e5bbf625480f9c4f47e74792c879" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Malmo, SWEDEN</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;5.58°C   |   42.04°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_535d6d28cc7547ff9f188e553d5ffc52.setContent(html_3dd6e5bbf625480f9c4f47e74792c879);
+        
+
+        marker_4ec245ba5dae4d67963104cdc1a9b389.bindPopup(popup_535d6d28cc7547ff9f188e553d5ffc52)
+        ;
+
+        
+    
+    
+            marker_4ec245ba5dae4d67963104cdc1a9b389.bindTooltip(
+                `<div>
+                     Malmo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8efaa36ebc445d7a77ef6f47e68ed90 = L.marker(
+                [52.21351, 0.08444],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_9fc521f5191f4935ae056f434e3e6ded = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_f8efaa36ebc445d7a77ef6f47e68ed90.setIcon(icon_9fc521f5191f4935ae056f434e3e6ded);
+        
+    
+        var popup_0c67b8ca78fc415a92981e2a38da16ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da407d406a5840dca74979d72594b51a = $(`<div id="html_da407d406a5840dca74979d72594b51a" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Cambridge, UK</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;16:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;-4.96°C   |   23.07°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_0c67b8ca78fc415a92981e2a38da16ac.setContent(html_da407d406a5840dca74979d72594b51a);
+        
+
+        marker_f8efaa36ebc445d7a77ef6f47e68ed90.bindPopup(popup_0c67b8ca78fc415a92981e2a38da16ac)
+        ;
+
+        
+    
+    
+            marker_f8efaa36ebc445d7a77ef6f47e68ed90.bindTooltip(
+                `<div>
+                     Cambridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4934ec3577549e0926e41d59d1e12a3 = L.marker(
+                [48.84313, 2.42938],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_8f18ada7882f46a2bbe719907c699c83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_a4934ec3577549e0926e41d59d1e12a3.setIcon(icon_8f18ada7882f46a2bbe719907c699c83);
+        
+    
+        var popup_6d7aad6d620e47faa0c84412bfd138d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7838b0699b55447c897bf197739f83af = $(`<div id="html_7838b0699b55447c897bf197739f83af" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_paris.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Paris, FRANCE</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;8.93°C   |   48.07°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_6d7aad6d620e47faa0c84412bfd138d6.setContent(html_7838b0699b55447c897bf197739f83af);
+        
+
+        marker_a4934ec3577549e0926e41d59d1e12a3.bindPopup(popup_6d7aad6d620e47faa0c84412bfd138d6)
+        ;
+
+        
+    
+    
+            marker_a4934ec3577549e0926e41d59d1e12a3.bindTooltip(
+                `<div>
+                     Paris
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40db06d7ee0c434db79305656214d704 = L.marker(
+                [55.71998, 37.62822],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_9dd3cdc32e8e437598af8e0c8a7b222a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_40db06d7ee0c434db79305656214d704.setIcon(icon_9dd3cdc32e8e437598af8e0c8a7b222a);
+        
+    
+        var popup_0f2cb7e65655482596798df9650faefc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42775d7477474a309c08137448370e3c = $(`<div id="html_42775d7477474a309c08137448370e3c" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Moscow, RUSSIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;-1.17°C   |   29.89°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_0f2cb7e65655482596798df9650faefc.setContent(html_42775d7477474a309c08137448370e3c);
+        
+
+        marker_40db06d7ee0c434db79305656214d704.bindPopup(popup_0f2cb7e65655482596798df9650faefc)
+        ;
+
+        
+    
+    
+            marker_40db06d7ee0c434db79305656214d704.bindTooltip(
+                `<div>
+                     Moscow
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_058c429ae3b7496ab8d9128bc9794a44 = L.marker(
+                [59.94185, 30.37332],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_ce497bd38d874be48f0ba377d3c8bff4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_058c429ae3b7496ab8d9128bc9794a44.setIcon(icon_ce497bd38d874be48f0ba377d3c8bff4);
+        
+    
+        var popup_a7f6329997d7436ba24bd217c989238a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_695957a645ca4f0498fa2c13faa648cc = $(`<div id="html_695957a645ca4f0498fa2c13faa648cc" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Saint Petersburg, RUSSIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;4.79°C   |   40.62°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_a7f6329997d7436ba24bd217c989238a.setContent(html_695957a645ca4f0498fa2c13faa648cc);
+        
+
+        marker_058c429ae3b7496ab8d9128bc9794a44.bindPopup(popup_a7f6329997d7436ba24bd217c989238a)
+        ;
+
+        
+    
+    
+            marker_058c429ae3b7496ab8d9128bc9794a44.bindTooltip(
+                `<div>
+                     Saint Petersburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_476c7eddb1cc45699909ba4cfbe14e23 = L.marker(
+                [26.282502, 50.213035],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_fbd27b6f7ea244dbbc16aa472a016c1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_476c7eddb1cc45699909ba4cfbe14e23.setIcon(icon_fbd27b6f7ea244dbbc16aa472a016c1c);
+        
+    
+        var popup_08771c86837240ddbca21c33f62c5f75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9934ad4fe21c470cbb519dc21ac93951 = $(`<div id="html_9934ad4fe21c470cbb519dc21ac93951" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Al Khobar, SAUDI ARABIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;15.99°C   |   60.78°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_08771c86837240ddbca21c33f62c5f75.setContent(html_9934ad4fe21c470cbb519dc21ac93951);
+        
+
+        marker_476c7eddb1cc45699909ba4cfbe14e23.bindPopup(popup_08771c86837240ddbca21c33f62c5f75)
+        ;
+
+        
+    
+    
+            marker_476c7eddb1cc45699909ba4cfbe14e23.bindTooltip(
+                `<div>
+                     Al Khobar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c7276d805c0f4f25872c061b2911bd8d = L.marker(
+                [41.042283, 28.97771],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_10bc8e13537c4acea8443f87b7f48e03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_c7276d805c0f4f25872c061b2911bd8d.setIcon(icon_10bc8e13537c4acea8443f87b7f48e03);
+        
+    
+        var popup_ce22572cedec4b8a82fba19b416ea035 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c17bc0dc3ccd445b8c7fd24682fca9ce = $(`<div id="html_c17bc0dc3ccd445b8c7fd24682fca9ce" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Istanbul, TURKEY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;8.91°C   |   48.04°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_ce22572cedec4b8a82fba19b416ea035.setContent(html_c17bc0dc3ccd445b8c7fd24682fca9ce);
+        
+
+        marker_c7276d805c0f4f25872c061b2911bd8d.bindPopup(popup_ce22572cedec4b8a82fba19b416ea035)
+        ;
+
+        
+    
+    
+            marker_c7276d805c0f4f25872c061b2911bd8d.bindTooltip(
+                `<div>
+                     Istanbul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_358d62099d9345ea9b381fd9f7ac7246 = L.marker(
+                [25.044362, 55.240822],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_f73745dc09504993a1d15918b15d9be1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_358d62099d9345ea9b381fd9f7ac7246.setIcon(icon_f73745dc09504993a1d15918b15d9be1);
+        
+    
+        var popup_5e104ab1378a48e2a86adf2f744aeba8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07dd784ecaf546a59584aae02996c2e7 = $(`<div id="html_07dd784ecaf546a59584aae02996c2e7" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Dubai, UAE</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;20:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17.28°C   |   63.1°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_5e104ab1378a48e2a86adf2f744aeba8.setContent(html_07dd784ecaf546a59584aae02996c2e7);
+        
+
+        marker_358d62099d9345ea9b381fd9f7ac7246.bindPopup(popup_5e104ab1378a48e2a86adf2f744aeba8)
+        ;
+
+        
+    
+    
+            marker_358d62099d9345ea9b381fd9f7ac7246.bindTooltip(
+                `<div>
+                     Dubai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25349b509b854618b2e234b7cc0c83f1 = L.marker(
+                [25.26741, 55.29268],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_ec5462d39b4f40259d90133bc5e72d17 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_25349b509b854618b2e234b7cc0c83f1.setIcon(icon_ec5462d39b4f40259d90133bc5e72d17);
+        
+    
+        var popup_eb675289742545d984aa956463741c4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f403b5a7682424fa5f6b829583d29e4 = $(`<div id="html_3f403b5a7682424fa5f6b829583d29e4" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Dubai, EGYPT</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;18:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17.28°C   |   63.1°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_eb675289742545d984aa956463741c4f.setContent(html_3f403b5a7682424fa5f6b829583d29e4);
+        
+
+        marker_25349b509b854618b2e234b7cc0c83f1.bindPopup(popup_eb675289742545d984aa956463741c4f)
+        ;
+
+        
+    
+    
+            marker_25349b509b854618b2e234b7cc0c83f1.bindTooltip(
+                `<div>
+                     Dubai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6960bcd85d83497fbd93ce4f5e0d36e1 = L.marker(
+                [60.29322, 24.96814],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_4af3468884cb4965afcebe5556b28f5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_6960bcd85d83497fbd93ce4f5e0d36e1.setIcon(icon_4af3468884cb4965afcebe5556b28f5b);
+        
+    
+        var popup_32668c3274d24e949ac1d17310537398 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d34de13955341ada2f031bedaf53d0c = $(`<div id="html_2d34de13955341ada2f031bedaf53d0c" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_helsinki.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Helsinki, FINLAND</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;4.97°C   |   40.95°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_32668c3274d24e949ac1d17310537398.setContent(html_2d34de13955341ada2f031bedaf53d0c);
+        
+
+        marker_6960bcd85d83497fbd93ce4f5e0d36e1.bindPopup(popup_32668c3274d24e949ac1d17310537398)
+        ;
+
+        
+    
+    
+            marker_6960bcd85d83497fbd93ce4f5e0d36e1.bindTooltip(
+                `<div>
+                     Helsinki
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_228c7a0ffbff465685981a04bd7973a6 = L.marker(
+                [53.10784, 8.86275],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_73ce9c92b88b44ca9625629d437f80f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_228c7a0ffbff465685981a04bd7973a6.setIcon(icon_73ce9c92b88b44ca9625629d437f80f8);
+        
+    
+        var popup_577718e424fd43a09edbd9267e5954bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24d204cbd79d49a1b0eeb775591aeccc = $(`<div id="html_24d204cbd79d49a1b0eeb775591aeccc" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_bremen.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Bremen, GERMANY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;6.69°C   |   44.04°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_577718e424fd43a09edbd9267e5954bc.setContent(html_24d204cbd79d49a1b0eeb775591aeccc);
+        
+
+        marker_228c7a0ffbff465685981a04bd7973a6.bindPopup(popup_577718e424fd43a09edbd9267e5954bc)
+        ;
+
+        
+    
+    
+            marker_228c7a0ffbff465685981a04bd7973a6.bindTooltip(
+                `<div>
+                     Bremen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cc3e47237cc40b588a5e60bbd54f8d2 = L.marker(
+                [51.46688, 7.27593],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_d98abf6a81a24ad8b2311428ba1f10a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_2cc3e47237cc40b588a5e60bbd54f8d2.setIcon(icon_d98abf6a81a24ad8b2311428ba1f10a4);
+        
+    
+        var popup_c74f60fd874d4691b3b01cf67979b65f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4766b765e0084550871dc9fd64bbc002 = $(`<div id="html_4766b765e0084550871dc9fd64bbc002" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_bochum.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Bochum, GERMANY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;7.36°C   |   45.25°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_c74f60fd874d4691b3b01cf67979b65f.setContent(html_4766b765e0084550871dc9fd64bbc002);
+        
+
+        marker_2cc3e47237cc40b588a5e60bbd54f8d2.bindPopup(popup_c74f60fd874d4691b3b01cf67979b65f)
+        ;
+
+        
+    
+    
+            marker_2cc3e47237cc40b588a5e60bbd54f8d2.bindTooltip(
+                `<div>
+                     Bochum
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed7ab42e297648c586440a270527f643 = L.marker(
+                [53.6049, 9.95609],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_954bf1258fc24b1297d7e681a73093ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ed7ab42e297648c586440a270527f643.setIcon(icon_954bf1258fc24b1297d7e681a73093ac);
+        
+    
+        var popup_2d88b07616a345068d81f8cfab61c94c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_acf4da8abd0545f2a0361a22ba3270c1 = $(`<div id="html_acf4da8abd0545f2a0361a22ba3270c1" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_hamburg.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Hamburg, GERMANY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;5.81°C   |   42.46°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_2d88b07616a345068d81f8cfab61c94c.setContent(html_acf4da8abd0545f2a0361a22ba3270c1);
+        
+
+        marker_ed7ab42e297648c586440a270527f643.bindPopup(popup_2d88b07616a345068d81f8cfab61c94c)
+        ;
+
+        
+    
+    
+            marker_ed7ab42e297648c586440a270527f643.bindTooltip(
+                `<div>
+                     Hamburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01d0b785b31a4520b07625f5507eaf5f = L.marker(
+                [50.13075, 8.51832],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_8f9b78a2aba94ced86eefe217068e420 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_01d0b785b31a4520b07625f5507eaf5f.setIcon(icon_8f9b78a2aba94ced86eefe217068e420);
+        
+    
+        var popup_2e8268d3763a49b59858143e679e5b53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a39050300a648fb82c9da72c76b3e65 = $(`<div id="html_1a39050300a648fb82c9da72c76b3e65" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_frankfurt.jpg width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Frankfurt, GERMANY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;4.31°C   |   39.76°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_2e8268d3763a49b59858143e679e5b53.setContent(html_1a39050300a648fb82c9da72c76b3e65);
+        
+
+        marker_01d0b785b31a4520b07625f5507eaf5f.bindPopup(popup_2e8268d3763a49b59858143e679e5b53)
+        ;
+
+        
+    
+    
+            marker_01d0b785b31a4520b07625f5507eaf5f.bindTooltip(
+                `<div>
+                     Frankfurt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d42b53c770645b7aba27085c65b372e = L.marker(
+                [53.13042, -6.74563],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_cb78ebc6e3e8472ebf7d43550f00cd16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_5d42b53c770645b7aba27085c65b372e.setIcon(icon_cb78ebc6e3e8472ebf7d43550f00cd16);
+        
+    
+        var popup_dbaa1d65584d439ea1c31209604b786d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7bc6bf68d7e4d5399caf1c3f8dc3289 = $(`<div id="html_f7bc6bf68d7e4d5399caf1c3f8dc3289" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_kilcullen.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Kilcullen, IRELAND</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;16:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;6.42°C   |   43.56°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_dbaa1d65584d439ea1c31209604b786d.setContent(html_f7bc6bf68d7e4d5399caf1c3f8dc3289);
+        
+
+        marker_5d42b53c770645b7aba27085c65b372e.bindPopup(popup_dbaa1d65584d439ea1c31209604b786d)
+        ;
+
+        
+    
+    
+            marker_5d42b53c770645b7aba27085c65b372e.bindTooltip(
+                `<div>
+                     Kilcullen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1dae5ee49da4c0bb935798a83b457d1 = L.marker(
+                [44.407059, 8.93399],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_8728b02c1ec54b3ebcb56c55336da4aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_a1dae5ee49da4c0bb935798a83b457d1.setIcon(icon_8728b02c1ec54b3ebcb56c55336da4aa);
+        
+    
+        var popup_7ed7027f38d14cf68d6aab12fce0e9e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_feca2d32aa0c4aa295d664d701335216 = $(`<div id="html_feca2d32aa0c4aa295d664d701335216" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_genoa.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Genoa, ITALY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;9.69°C   |   49.44°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_7ed7027f38d14cf68d6aab12fce0e9e7.setContent(html_feca2d32aa0c4aa295d664d701335216);
+        
+
+        marker_a1dae5ee49da4c0bb935798a83b457d1.bindPopup(popup_7ed7027f38d14cf68d6aab12fce0e9e7)
+        ;
+
+        
+    
+    
+            marker_a1dae5ee49da4c0bb935798a83b457d1.bindTooltip(
+                `<div>
+                     Genoa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77f0b4f59d704b419d982a7e8f2254c1 = L.marker(
+                [29.311661, 47.481766],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_4771cf9dcad04632a484397c93af7ac9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_77f0b4f59d704b419d982a7e8f2254c1.setIcon(icon_4771cf9dcad04632a484397c93af7ac9);
+        
+    
+        var popup_960345e09e764c279e6369bce3253e3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18b04d9414924bba8df4679a2383d98a = $(`<div id="html_18b04d9414924bba8df4679a2383d98a" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>KUWAIT</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;19:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;14.88°C   |   58.78°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_960345e09e764c279e6369bce3253e3e.setContent(html_18b04d9414924bba8df4679a2383d98a);
+        
+
+        marker_77f0b4f59d704b419d982a7e8f2254c1.bindPopup(popup_960345e09e764c279e6369bce3253e3e)
+        ;
+
+        
+    
+    
+            marker_77f0b4f59d704b419d982a7e8f2254c1.bindTooltip(
+                `<div>
+                     KUWAIT
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fb576f723f443efa9700401aa57a3be = L.marker(
+                [9.081999, 8.675277],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_7cbf21b709e14a71839088a82e6e2e75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_1fb576f723f443efa9700401aa57a3be.setIcon(icon_7cbf21b709e14a71839088a82e6e2e75);
+        
+    
+        var popup_bed695e047b64728a03bfaec36be4752 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e39150758f447fd8c84dd7205353b05 = $(`<div id="html_6e39150758f447fd8c84dd7205353b05" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>NIGERIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;34.9°C   |   94.82°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_bed695e047b64728a03bfaec36be4752.setContent(html_6e39150758f447fd8c84dd7205353b05);
+        
+
+        marker_1fb576f723f443efa9700401aa57a3be.bindPopup(popup_bed695e047b64728a03bfaec36be4752)
+        ;
+
+        
+    
+    
+            marker_1fb576f723f443efa9700401aa57a3be.bindTooltip(
+                `<div>
+                     NIGERIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38fd1e123269410b8ee96c9207838f95 = L.marker(
+                [59.913868, 10.752245],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_f5712b427e0b4875b4f5f47e4c87b8b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_38fd1e123269410b8ee96c9207838f95.setIcon(icon_f5712b427e0b4875b4f5f47e4c87b8b6);
+        
+    
+        var popup_1cde233e2a6c40a58f331594f3d693e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9672dc9ef5a645a5b2833ff51b8097ff = $(`<div id="html_9672dc9ef5a645a5b2833ff51b8097ff" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Oslo, NORWAY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;1.58°C   |   34.84°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_1cde233e2a6c40a58f331594f3d693e9.setContent(html_9672dc9ef5a645a5b2833ff51b8097ff);
+        
+
+        marker_38fd1e123269410b8ee96c9207838f95.bindPopup(popup_1cde233e2a6c40a58f331594f3d693e9)
+        ;
+
+        
+    
+    
+            marker_38fd1e123269410b8ee96c9207838f95.bindTooltip(
+                `<div>
+                     Oslo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff77f14bd59640b1b2499f64be330cb7 = L.marker(
+                [58.964432, 5.72625],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_22ff694c92814388a044b0b12f180285 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ff77f14bd59640b1b2499f64be330cb7.setIcon(icon_22ff694c92814388a044b0b12f180285);
+        
+    
+        var popup_0570992e3cea4a768cbb1bc3447bc69b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_402d40e0737b49a88174c7e99ac67673 = $(`<div id="html_402d40e0737b49a88174c7e99ac67673" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Stavanger, NORWAY</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;5.06°C   |   41.11°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_0570992e3cea4a768cbb1bc3447bc69b.setContent(html_402d40e0737b49a88174c7e99ac67673);
+        
+
+        marker_ff77f14bd59640b1b2499f64be330cb7.bindPopup(popup_0570992e3cea4a768cbb1bc3447bc69b)
+        ;
+
+        
+    
+    
+            marker_ff77f14bd59640b1b2499f64be330cb7.bindTooltip(
+                `<div>
+                     Stavanger
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3f8b1e9e3c54ed7b4b9b4ac6b04472a = L.marker(
+                [51.11055, 17.02556],
+                {}
+            ).addTo(feature_group_4d66686c158b4edb90b11d4d15a26a76);
+        
+    
+            var icon_6a443f6e988245cdaf87acf60aa114bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_e3f8b1e9e3c54ed7b4b9b4ac6b04472a.setIcon(icon_6a443f6e988245cdaf87acf60aa114bc);
+        
+    
+        var popup_958f95fd31134a26a45040cb0af576b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5103532da2fb492b917332fbb75e8c82 = $(`<div id="html_5103532da2fb492b917332fbb75e8c82" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Wroclaw, POLAND</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;17:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;3.87°C   |   38.97°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_958f95fd31134a26a45040cb0af576b7.setContent(html_5103532da2fb492b917332fbb75e8c82);
+        
+
+        marker_e3f8b1e9e3c54ed7b4b9b4ac6b04472a.bindPopup(popup_958f95fd31134a26a45040cb0af576b7)
+        ;
+
+        
+    
+    
+            marker_e3f8b1e9e3c54ed7b4b9b4ac6b04472a.bindTooltip(
+                `<div>
+                     Wroclaw
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_751ee13161bb4398b8af5dd4d6ef3f09 = L.featureGroup(
+                {}
+            ).addTo(map_4eacf0fa0ed24317854fee69a0d5733a);
+        
+    
+            var marker_395e44ea12404cbcbf2bdf20150f1faa = L.marker(
+                [-37.82076, 144.94809],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_a05fc75974414bf9a755a09ab0b39730 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_395e44ea12404cbcbf2bdf20150f1faa.setIcon(icon_a05fc75974414bf9a755a09ab0b39730);
+        
+    
+        var popup_46e32cabbe30419180aba73234083a22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8724a2a3de594946888d58b94d9f4eb3 = $(`<div id="html_8724a2a3de594946888d58b94d9f4eb3" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_melbourne.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Melbourne, AUSTRALIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;03:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;25.76°C   |   78.37°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_46e32cabbe30419180aba73234083a22.setContent(html_8724a2a3de594946888d58b94d9f4eb3);
+        
+
+        marker_395e44ea12404cbcbf2bdf20150f1faa.bindPopup(popup_46e32cabbe30419180aba73234083a22)
+        ;
+
+        
+    
+    
+            marker_395e44ea12404cbcbf2bdf20150f1faa.bindTooltip(
+                `<div>
+                     Melbourne
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_016f6a41a9df434fb31f9c2d6ea47344 = L.marker(
+                [17.44735, 78.37211],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_d90db6507448414cae39423d280e6423 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_016f6a41a9df434fb31f9c2d6ea47344.setIcon(icon_d90db6507448414cae39423d280e6423);
+        
+    
+        var popup_b82c6fb85c544740b46f021818f9172b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f8e15f0e67d40aab46ecf633192da0e = $(`<div id="html_3f8e15f0e67d40aab46ecf633192da0e" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_hyderabad.jpeg/?h=3456&la=en&w=5184 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Hyderabad, INDIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21:32</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21.24°C   |   70.23°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_b82c6fb85c544740b46f021818f9172b.setContent(html_3f8e15f0e67d40aab46ecf633192da0e);
+        
+
+        marker_016f6a41a9df434fb31f9c2d6ea47344.bindPopup(popup_b82c6fb85c544740b46f021818f9172b)
+        ;
+
+        
+    
+    
+            marker_016f6a41a9df434fb31f9c2d6ea47344.bindTooltip(
+                `<div>
+                     Hyderabad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4659ac2fa7244e395a54d45d8839c70 = L.marker(
+                [12.92272, 77.6577],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_3b7ba722105346bda72ea7807392e68d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f4659ac2fa7244e395a54d45d8839c70.setIcon(icon_3b7ba722105346bda72ea7807392e68d);
+        
+    
+        var popup_80d585365769475c9c90e1fedb51deba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97170544d2ec40b1adef64fa65227bdf = $(`<div id="html_97170544d2ec40b1adef64fa65227bdf" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Bangalore, INDIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21:32</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21.54°C   |   70.77°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_80d585365769475c9c90e1fedb51deba.setContent(html_97170544d2ec40b1adef64fa65227bdf);
+        
+
+        marker_f4659ac2fa7244e395a54d45d8839c70.bindPopup(popup_80d585365769475c9c90e1fedb51deba)
+        ;
+
+        
+    
+    
+            marker_f4659ac2fa7244e395a54d45d8839c70.bindTooltip(
+                `<div>
+                     Bangalore
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e2f8adc5695480092f537d0e4d381d2 = L.marker(
+                [39.966696, 116.38094],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_342323e306cd40cf895a3d6922c6a2b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2e2f8adc5695480092f537d0e4d381d2.setIcon(icon_342323e306cd40cf895a3d6922c6a2b1);
+        
+    
+        var popup_6e39123d8ddb4bf28c041a30fb8d143c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a385b1e5d93414cacc8ab0e88e1f4bd = $(`<div id="html_3a385b1e5d93414cacc8ab0e88e1f4bd" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_beijing.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Beijing, CHINA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;00:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;-3.0°C   |   26.6°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_6e39123d8ddb4bf28c041a30fb8d143c.setContent(html_3a385b1e5d93414cacc8ab0e88e1f4bd);
+        
+
+        marker_2e2f8adc5695480092f537d0e4d381d2.bindPopup(popup_6e39123d8ddb4bf28c041a30fb8d143c)
+        ;
+
+        
+    
+    
+            marker_2e2f8adc5695480092f537d0e4d381d2.bindTooltip(
+                `<div>
+                     Beijing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5737b2a20b6d4955939194510ccd09ec = L.marker(
+                [28.5356, 77.20908],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_2e5c155639d34cd2bd5a4cc5ab233267 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5737b2a20b6d4955939194510ccd09ec.setIcon(icon_2e5c155639d34cd2bd5a4cc5ab233267);
+        
+    
+        var popup_1e76d389c1f34d4d846ea383f47adb65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_176f6166f28b46799788666cb37ef952 = $(`<div id="html_176f6166f28b46799788666cb37ef952" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_new-delhi.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>New Delhi, INDIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21:32</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;16.04°C   |   60.87°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_1e76d389c1f34d4d846ea383f47adb65.setContent(html_176f6166f28b46799788666cb37ef952);
+        
+
+        marker_5737b2a20b6d4955939194510ccd09ec.bindPopup(popup_1e76d389c1f34d4d846ea383f47adb65)
+        ;
+
+        
+    
+    
+            marker_5737b2a20b6d4955939194510ccd09ec.bindTooltip(
+                `<div>
+                     New Delhi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dab41ed2eaf74db8ae7a2c887d636d86 = L.marker(
+                [19.11876, 72.91378],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_55f12d4543a240ea9a314646ef2fdc6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dab41ed2eaf74db8ae7a2c887d636d86.setIcon(icon_55f12d4543a240ea9a314646ef2fdc6a);
+        
+    
+        var popup_8012a363f74e4c2ca6b450cf809a95d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d92ff926450942119ceee186a385e96f = $(`<div id="html_d92ff926450942119ceee186a385e96f" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_mumbai.jpeg/?h=1718&la=en&w=2577 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Mumbai, INDIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21:32</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;28.0°C   |   82.4°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_8012a363f74e4c2ca6b450cf809a95d3.setContent(html_d92ff926450942119ceee186a385e96f);
+        
+
+        marker_dab41ed2eaf74db8ae7a2c887d636d86.bindPopup(popup_8012a363f74e4c2ca6b450cf809a95d3)
+        ;
+
+        
+    
+    
+            marker_dab41ed2eaf74db8ae7a2c887d636d86.bindTooltip(
+                `<div>
+                     Mumbai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fda3f232d98d43a686d338e439d0f2bf = L.marker(
+                [-31.95387, 115.85204],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_2908f48c35844675a908a50453133b6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fda3f232d98d43a686d338e439d0f2bf.setIcon(icon_2908f48c35844675a908a50453133b6d);
+        
+    
+        var popup_41ca97c88640407183ac4b3e22d4ec90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cf236cfc77740e68501f395ae8c0b62 = $(`<div id="html_1cf236cfc77740e68501f395ae8c0b62" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_perth.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Perth, AUSTRALIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;00:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;21.04°C   |   69.87°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_41ca97c88640407183ac4b3e22d4ec90.setContent(html_1cf236cfc77740e68501f395ae8c0b62);
+        
+
+        marker_fda3f232d98d43a686d338e439d0f2bf.bindPopup(popup_41ca97c88640407183ac4b3e22d4ec90)
+        ;
+
+        
+    
+    
+            marker_fda3f232d98d43a686d338e439d0f2bf.bindTooltip(
+                `<div>
+                     Perth
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78d7aaa5530b4cc7ae76036e73266e3c = L.marker(
+                [-27.46452, 153.03075],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_d7eff028018748ceaaf1a6deed8b2647 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_78d7aaa5530b4cc7ae76036e73266e3c.setIcon(icon_d7eff028018748ceaaf1a6deed8b2647);
+        
+    
+        var popup_561f9426bd92427b9b50403ce52820dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f60e081f3184091b2c7e3ca778033c8 = $(`<div id="html_6f60e081f3184091b2c7e3ca778033c8" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_brisbane.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Brisbane, AUSTRALIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;02:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;22.13°C   |   71.83°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_561f9426bd92427b9b50403ce52820dd.setContent(html_6f60e081f3184091b2c7e3ca778033c8);
+        
+
+        marker_78d7aaa5530b4cc7ae76036e73266e3c.bindPopup(popup_561f9426bd92427b9b50403ce52820dd)
+        ;
+
+        
+    
+    
+            marker_78d7aaa5530b4cc7ae76036e73266e3c.bindTooltip(
+                `<div>
+                     Brisbane
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c732f9fe31ba4c4b98d63a1735a721d8 = L.marker(
+                [22.28018, 114.17165],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_46b7033e3bec4e61a019a03ff23c32ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c732f9fe31ba4c4b98d63a1735a721d8.setIcon(icon_46b7033e3bec4e61a019a03ff23c32ea);
+        
+    
+        var popup_5c535ded405b4b30ad139ac4eaef4f14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97c231484e9b4926ba7c85ef8e396b47 = $(`<div id="html_97c231484e9b4926ba7c85ef8e396b47" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_wanchai.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Hong Kong, CHINA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;00:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;18.23°C   |   64.81°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_5c535ded405b4b30ad139ac4eaef4f14.setContent(html_97c231484e9b4926ba7c85ef8e396b47);
+        
+
+        marker_c732f9fe31ba4c4b98d63a1735a721d8.bindPopup(popup_5c535ded405b4b30ad139ac4eaef4f14)
+        ;
+
+        
+    
+    
+            marker_c732f9fe31ba4c4b98d63a1735a721d8.bindTooltip(
+                `<div>
+                     Hong Kong
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_321ef3b36a4e49f6b8bb0ff5b4e9f39c = L.marker(
+                [31.246027, 121.483385],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_be3dd6beabda4326a0466a55178b9460 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_321ef3b36a4e49f6b8bb0ff5b4e9f39c.setIcon(icon_be3dd6beabda4326a0466a55178b9460);
+        
+    
+        var popup_8796ff728b9c4858ac58312e824a23b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8f57cda92e84a83b06ebf07ea6ab7cb = $(`<div id="html_d8f57cda92e84a83b06ebf07ea6ab7cb" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_shanghai.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Shanghai, CHINA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;00:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;5.03°C   |   41.05°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_8796ff728b9c4858ac58312e824a23b4.setContent(html_d8f57cda92e84a83b06ebf07ea6ab7cb);
+        
+
+        marker_321ef3b36a4e49f6b8bb0ff5b4e9f39c.bindPopup(popup_8796ff728b9c4858ac58312e824a23b4)
+        ;
+
+        
+    
+    
+            marker_321ef3b36a4e49f6b8bb0ff5b4e9f39c.bindTooltip(
+                `<div>
+                     Shanghai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5bddb07b4ef2451183520106a8279864 = L.marker(
+                [25.04652, 121.46538],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_ac6bb570c0ac40b2807e247caf1dd87b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5bddb07b4ef2451183520106a8279864.setIcon(icon_ac6bb570c0ac40b2807e247caf1dd87b);
+        
+    
+        var popup_6e6e60561ece41f3b0e2c327ae394e39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca3aa24cc73b43a298bf870d357371f5 = $(`<div id="html_ca3aa24cc73b43a298bf870d357371f5" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_guangzhou.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Guangzhou, CHINA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;00:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;15.86°C   |   60.55°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_6e6e60561ece41f3b0e2c327ae394e39.setContent(html_ca3aa24cc73b43a298bf870d357371f5);
+        
+
+        marker_5bddb07b4ef2451183520106a8279864.bindPopup(popup_6e6e60561ece41f3b0e2c327ae394e39)
+        ;
+
+        
+    
+    
+            marker_5bddb07b4ef2451183520106a8279864.bindTooltip(
+                `<div>
+                     Guangzhou
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b0135cb65414583b3bcac02f02b4725 = L.marker(
+                [-6.17511, 106.865036],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_3e14b35906b94968bc747886ee909d28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5b0135cb65414583b3bcac02f02b4725.setIcon(icon_3e14b35906b94968bc747886ee909d28);
+        
+    
+        var popup_f43654b1ec2b422abdf00a64873003a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c37eeeea7ab4be69d2a075bf51a451f = $(`<div id="html_8c37eeeea7ab4be69d2a075bf51a451f" style="width: 100.0%; height: 100.0%;"> <body> <img src= width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Jakarta, INDONESIA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;23:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Sunday, 01/12/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;26.07°C   |   78.93°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_f43654b1ec2b422abdf00a64873003a5.setContent(html_8c37eeeea7ab4be69d2a075bf51a451f);
+        
+
+        marker_5b0135cb65414583b3bcac02f02b4725.bindPopup(popup_f43654b1ec2b422abdf00a64873003a5)
+        ;
+
+        
+    
+    
+            marker_5b0135cb65414583b3bcac02f02b4725.bindTooltip(
+                `<div>
+                     Jakarta
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d78d8386996d450e9fa878806dfc673e = L.marker(
+                [35.443707, 139.638031],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_7c72c5580b6249a79d46e6d29ed95dcf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d78d8386996d450e9fa878806dfc673e.setIcon(icon_7c72c5580b6249a79d46e6d29ed95dcf);
+        
+    
+        var popup_cbd536b415a94b958be058ec9902e10b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d954200c61e45079a2eed7ca85990a3 = $(`<div id="html_8d954200c61e45079a2eed7ca85990a3" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_yokohama.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Yokohama, JAPAN</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;01:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;6.61°C   |   43.9°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_cbd536b415a94b958be058ec9902e10b.setContent(html_8d954200c61e45079a2eed7ca85990a3);
+        
+
+        marker_d78d8386996d450e9fa878806dfc673e.bindPopup(popup_cbd536b415a94b958be058ec9902e10b)
+        ;
+
+        
+    
+    
+            marker_d78d8386996d450e9fa878806dfc673e.bindTooltip(
+                `<div>
+                     Yokohama
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97182116aca84bea8464b6388e429be4 = L.marker(
+                [37.566536, 126.977966],
+                {}
+            ).addTo(feature_group_751ee13161bb4398b8af5dd4d6ef3f09);
+        
+    
+            var icon_b520edb450ad4b4585af9689d007d7bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "map-marker", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_97182116aca84bea8464b6388e429be4.setIcon(icon_b520edb450ad4b4585af9689d007d7bc);
+        
+    
+        var popup_49e2b23fbd244949aa9b9ace3fb2de33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc1dc075b13a4de28e7a6e7422a72aeb = $(`<div id="html_cc1dc075b13a4de28e7a6e7422a72aeb" style="width: 100.0%; height: 100.0%;"> <body> <img src=https://www.aveva.com/-/media/RedesignV2/English/Pages-Template/Contact/Worldwide-Offices/Office-Images/aveva_office_seoul.jpg?h=307&la=en&w=355 width="200" height="150"> </body> <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>Seoul, SOUTH KOREA</strong></span></h2> <table style="width: 225px;" cellpadding="0"> <tbody>  <tr> <td style="width: 109px;"><strong>Time&nbsp;</strong></td> <td style="width: 181px;">&nbsp;01:02</td> </tr>  <tr> <td style="width: 109px;"><strong>Date&nbsp;</strong></td> <td style="width: 181px;">&nbsp;Monday, 01/13/20</td> </tr>  <tr> <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td> <td style="width: 181px;">&nbsp;-2.28°C   |   27.9°F</td> </tr>  <tr> <td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  <tr> <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td> <td style="width: 181px;">&nbsp;</td> </tr>  </tbody> </table> </div>`)[0];
+            popup_49e2b23fbd244949aa9b9ace3fb2de33.setContent(html_cc1dc075b13a4de28e7a6e7422a72aeb);
+        
+
+        marker_97182116aca84bea8464b6388e429be4.bindPopup(popup_49e2b23fbd244949aa9b9ace3fb2de33)
+        ;
+
+        
+    
+    
+            marker_97182116aca84bea8464b6388e429be4.bindTooltip(
+                `<div>
+                     Seoul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_de59758b09ee4051aadb5652b6e074f9 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_8591563c6f3f467fb3b6ae0b917728f9,
+                },
+                overlays :  {
+                    "NAM" : feature_group_c21c538638f740a79db43b9a4154c167,
+                    "EMEA" : feature_group_4d66686c158b4edb90b11d4d15a26a76,
+                    "APA" : feature_group_751ee13161bb4398b8af5dd4d6ef3f09,
+                },
+            };
+            L.control.layers(
+                layer_control_de59758b09ee4051aadb5652b6e074f9.base_layers,
+                layer_control_de59758b09ee4051aadb5652b6e074f9.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_4eacf0fa0ed24317854fee69a0d5733a);
+        
+</script>
