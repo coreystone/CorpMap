@@ -54,7 +54,7 @@ def get_temp(location): # -> (celsius, fahr)
     return (w.get_temperature('celsius')['temp'], w.get_temperature('fahrenheit')['temp'])
 
 
-def format_html(location, time, date, temp_c, temp_f, info, image):
+def format_html(location, time, date, temp_c, temp_f, compl, contact, image):
     return f"""
 <body> <img src={image} width="220" height="140"> </body>
 <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>{location}</strong></span></h2>
@@ -77,13 +77,13 @@ def format_html(location, time, date, temp_c, temp_f, info, image):
 </tr>
 
 <tr>
-<td style="width: 109px;"><strong>Network Speed&nbsp;</strong></td>
-<td style="width: 181px;">&nbsp;{info}</td>
+<td style="width: 109px;"><strong>Compliance&nbsp;</strong></td>
+<td style="width: 181px;">&nbsp;{compl}</td>
 </tr>
 
 <tr>
 <td style="width: 109px;"><strong>Contacts&nbsp;</strong></td>
-<td style="width: 181px;">&nbsp;{info}</td>
+<td style="width: 181px;">&nbsp;{contact}</td>
 </tr>
 
 </tbody>
@@ -102,14 +102,14 @@ def add_marker(html, group, tooltip):
 
 
 for loc in locations:
-    coords, region, tz, info, image = locations[loc][0], locations[loc][1], locations[loc][2], locations[loc][3], locations[loc][4]
+    ind = locations[loc]
+    coords, region, tz, compl, contact, image = ind[0], ind[1], ind[2], ind[3], ind[4], ind[5]
     tooltip = loc.split(',')[0]
     time = get_time(timezone(tz))
     date = get_date(timezone(tz))
     temp = get_temp(tooltip)
     temp_c, temp_f = temp[0],temp[1]
-    html = format_html(loc, time, date, temp_c, temp_f, info, image)
-
+    html = format_html(loc, time, date, temp_c, temp_f, compl, contact, image)
 
     add_marker(html, region, tooltip)
 
