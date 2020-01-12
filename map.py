@@ -56,7 +56,7 @@ def get_temp(location): # -> (celsius, fahr)
 
 def format_html(location, time, date, temp_c, temp_f, info, image):
     return f"""
-<body> <img src={image} width="200" height="150"> </body>
+<body> <img src={image} width="220" height="140"> </body>
 <h4 style="color: #2e6c80"><span style="color: #000000;"><strong>{location}</strong></span></h2>
 <table style="width: 225px;" cellpadding="0">
 <tbody>
@@ -73,7 +73,7 @@ def format_html(location, time, date, temp_c, temp_f, info, image):
 
 <tr>
 <td style="width: 109px;"><strong>Temperature&nbsp;</strong></td>
-<td style="width: 181px;">&nbsp;{temp_c}°C   |   {temp_f}°F</td>
+<td style="width: 181px;">&nbsp;{temp_c}°C   /   {temp_f}°F</td>
 </tr>
 
 <tr>
